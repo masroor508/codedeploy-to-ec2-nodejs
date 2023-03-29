@@ -20,11 +20,3 @@ hooks:
   ApplicationStart:
     - location: applicationstart.sh
       timeout: 300
-  ApplicationStop:
-    - location: stop_pm2.sh
-      timeout: 300
-      runas: ubuntu
-  AfterInstall:
-    - location: start_pm2.sh
-      timeout: 300
-      runas: ubuntu
