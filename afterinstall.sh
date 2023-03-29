@@ -9,7 +9,7 @@ npm run build
 
 # Set environment variables
 export NODE_ENV=production
-export PORT=8080
+export PORT=3000
 
 # Start the application
 npm start
