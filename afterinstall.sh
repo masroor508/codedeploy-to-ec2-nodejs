@@ -1,13 +1,15 @@
 #!/bin/bash
 
-# Change to the application directory
-cd /home/ubuntu/
+# Install dependencies
+cd /home/ubuntu
+npm install
 
-# Stop the PM2 process manager
-pm2 kill
+# Build the application (if necessary)
+npm run build
 
-# Wait for all Node.js processes to stop
-pm2 stop all
+# Set environment variables
+export NODE_ENV=production
+export PORT=8080
 
-# Delete all PM2 processes
-pm2 delete all
+# Start the application
+npm start
