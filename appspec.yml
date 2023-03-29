@@ -4,14 +4,15 @@ files:
   - source: /
     destination: /home/ubuntu
 hooks:
+  ApplicationStop:
+    - location: scripts/stop_server.sh
+      runas: ignore_errors
   BeforeInstall:
     - location: beforeinstall.sh
       timeout: 300
-      runas: ubuntu
   AfterInstall:
     - location: afterinstall.sh
       timeout: 300
-      runas: ubuntu
   ApplicationStart:
     - location: applicationstart.sh
       timeout: 300
