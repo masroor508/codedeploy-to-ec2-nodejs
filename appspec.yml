@@ -7,12 +7,15 @@ hooks:
   BeforeInstall:
     - location: beforeinstall.sh
       timeout: 300
+      runas: root
   AfterInstall:
     - location: afterinstall.sh
       timeout: 300
+      runas: root
   ApplicationStart:
     - location: applicationstart.sh
       timeout: 300
-  ApplicationStop:
+      runas: root
+  # ApplicationStop:
     - location: applicationstop.sh
-      runas: ignore_errors    
+      runas: root    
